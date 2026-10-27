@@ -1,0 +1,170 @@
+/* ==========================================================================
+   Step 4: Typography and Custom Google Font Integrations
+   ========================================================================== */
+.header-font {
+    font-family: 'Orbitron', 'Segoe UI', sans-serif;
+    letter-spacing: 0.15em;
+}
+
+.body-font {
+    font-family: 'Prompt', 'Segoe UI', sans-serif;
+}
+
+/* Base Settings */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Offset margins for internal page navigation to avoid Navbar collisions */
+.scroll-margin {
+    scroll-margin-top: 90px;
+}
+
+/* ==========================================================================
+   Step 3: Color Theory & Gradient Application
+   Theme: Deep Tech Midnight to Cool Electric Slate
+   ========================================================================== */
+.custom-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay flare to maintain readability and visually separate content blocks */
+.custom-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   Step 5: Interactive Visual Adjustments & Hover Effects
+   ========================================================================== */
+.hover-card {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px -4px rgba(0, 0, 0, 0.12) !important;
+}
+
+.hover-btn {
+    transition: all 0.2s ease;
+}
+
+.hover-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Navigation bar formatting corrections */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-nav .nav-link.active {
+    color: #3b82f6 !important;
+    background-color: rgba(59, 130, 246, 0.15);
+    font-weight: 700;
+}
+
+/* Font scale utility rules */
+.font-xs {
+    font-size: 0.75rem;
+}
+
+.tracking-wider {
+    letter-spacing: 0.1em;
+}
+
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+
+.opacity-90 {
+    opacity: 0.90;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+/* Homework 8: accessibility and optional dark theme */
+body {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dark-theme {
+    background-color: #111827 !important;
+    color: #f3f4f6 !important;
+}
+
+.dark-theme main .card,
+.dark-theme main .list-group-item {
+    background-color: #1f2937 !important;
+    color: #f3f4f6 !important;
+    border-color: #374151 !important;
+}
+
+.dark-theme main h2,
+.dark-theme main h3,
+.dark-theme main p,
+.dark-theme main td,
+.dark-theme main th,
+.dark-theme main label {
+    color: #f3f4f6 !important;
+}
+
+.dark-theme .table {
+    --bs-table-bg: #1f2937;
+    --bs-table-color: #f3f4f6;
+    --bs-table-striped-bg: #273449;
+    --bs-table-striped-color: #f3f4f6;
+    --bs-table-hover-bg: #334155;
+    --bs-table-hover-color: #ffffff;
+}
+
+.dark-theme .text-muted,
+.dark-theme .text-secondary {
+    color: #d1d5db !important;
+}
+
+.dark-theme .form-control,
+.dark-theme .form-select {
+    background-color: #111827;
+    color: #f3f4f6;
+    border-color: #6b7280;
+}
+
+/* Homework 9: project image sizing and skill edit button appearance */
+.project-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.skill-edit {
+    text-decoration: none;
+    white-space: normal;
+}
+
+.skill-edit:hover,
+.skill-edit:focus {
+    text-decoration: underline;
+}

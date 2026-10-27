@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Mitchell Peterson | Portfolio</title>
+    <!-- Bootstrap 5.3 CSS CDN (Full Path) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts API Link (Full Path) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron:700|Prompt:400,500">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- HEADER BLOCK: Using a deep tech gradient for a gaming/software feel -->
+    <header class="custom-gradient text-white text-center py-4 shadow-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="header-font mb-1 display-5 fw-bold text-uppercase tracking-wider">William Mitchell Peterson</h1>
+                    <p class="lead mb-0 text-light opacity-90 fw-medium">Remote Field Technician | Computer Science Student | Aspiring Game Designer</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION BAR: Responsive Bootstrap navbar replacing unstyled links -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow-sm border-bottom border-secondary border-opacity-25">
+        <div class="container">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNav" aria-controls="portfolioNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="portfolioNav">
+                <ul id="dynamicNav" class="navbar-nav gap-2 text-center text-uppercase fw-semibold tracking-wide">
+                    <!-- jQuery creates the navigation links from an array in app.js. -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN GRID CONTAINER: Houses all the content sections with responsive spacing -->
+    <main class="container my-5 pb-5">
+        
+        <!-- BIOGRAPHY SECTION: With a sleek, borderless Bootstrap card -->
+        <section id="about" class="row mb-5 scroll-margin">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3 p-4">
+                    <h2 class="h3 border-bottom pb-2 text-dark fw-bold">Who I Am</h2>
+                    <!-- Add greeting Container-->
+                    <div id="greetingContainer" class="alert alert-info my-3 fw-medium body-font"></div>
+                    <p class="body-font lead text-muted mt-3">
+                        Hello, my name is William Mitchell Peterson and I have lived in Arizona my whole life. I have over a decade of hands-on experience in field services, telecommunications, and technical work. I currently work as a Remote Field Technician for Dish/EchoStar and am pursuing a Bachelor's Degree in Computer Science at Northern Arizona University.
+                    </p>
+                    <p class="body-font text-secondary">
+                        Although I am still developing my computer science skills, I bring a strong background in technical troubleshooting, customer service, networking, hardware installation, and problem solving. I enjoy learning about new technologies and hope to use my education to build a career in the technology industry, with interests including video game design and software development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION & WORK HISTORY ROW: Splits nicely into 2 columns on screens large or small -->
+        <div class="row g-4 mb-5">
+            
+            <!-- ACADEMIC HISTORY: Styled using Bootstrap's table utility classes -->
+            <section id="education" class="col-12 col-lg-6 scroll-margin">
+                <div class="card shadow-sm border-0 rounded-3 h-100 p-4">
+                    <h2 class="h3 border-bottom pb-2 text-dark fw-bold mb-3">Education</h2>
+                    <div id="educationTable" class="table-responsive">
+                        <!-- JavaScript builds the education table here. -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- WORK HISTORY: Polished with hover effect on rows for better UI tracking -->
+            <section id="experience" class="col-12 col-lg-6 scroll-margin">
+                <div class="card shadow-sm border-0 rounded-3 h-100 p-4">
+                    <h2 class="h3 border-bottom pb-2 text-dark fw-bold mb-3">Experience</h2>
+                    <div id="experienceTable" class="table-responsive">
+                        <!-- JavaScript builds the experience table here. -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SKILLS & BADGES: Grouped columns utilizing custom colored highlights for key field skills -->
+        <section id="skills" class="row mb-5 scroll-margin">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3 p-4">
+                    <h2 class="h3 border-bottom pb-2 text-dark fw-bold mb-4">My Skills & Certifications</h2>
+                    
+                    <div class="row g-4">
+                        <div class="col-12 col-md-8">
+                            <h3 class="h6 text-uppercase fw-bold text-primary tracking-wide mb-3">My Skills</h3>
+                            <ul id="skillsList" class="list-group list-group-flush body-font">
+                                <li class="list-group-item">Technical Troubleshooting</li>
+                                <li class="list-group-item">Customer Service</li>
+                                <li class="list-group-item">Problem Solving</li>
+                                <li class="list-group-item">Broadband Installation</li>
+                                <li class="list-group-item">Technical Documentation</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <h3 class="h6 text-uppercase fw-bold text-success tracking-wide mb-3">Add a Skill</h3>
+                            <form id="skillForm" class="d-flex flex-column gap-2">
+                                <label for="skillInput" class="form-label">Enter a skill</label>
+                                <input id="skillInput" class="form-control" type="text" placeholder="e.g., JavaScript" maxlength="60" required>
+                                <button id="skillSubmit" class="btn btn-primary" type="submit">Add Skill</button>
+                                <button id="cancelEdit" class="btn btn-outline-secondary d-none" type="button">Cancel Edit</button>
+                                <p class="small text-muted mb-0">Tip: click a skill name to edit it. Use its Remove button to delete it.</p>
+                                <p id="skillMessage" class="small mb-0" aria-live="polite"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="row mb-5 scroll-margin">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3 p-4">
+                    <h2 class="h3 border-bottom pb-2 text-dark fw-bold">Project Interests</h2>
+                    <p class="body-font text-muted mb-4 mt-2">Future strategic targets in computer science and software development modules.</p>
+                    
+                    <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                        <label for="projectSort" class="form-label mb-0 fw-semibold">Sort projects:</label>
+                        <select id="projectSort" class="form-select" style="max-width: 230px;">
+                            <option value="earliest">Earliest deadline first</option>
+                            <option value="latest">Latest deadline first</option>
+                        </select>
+                    </div>
+                    <div id="projectList" class="row g-4 justify-content-center">
+                        <!-- jQuery creates project cards from the projects array. -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="row scroll-margin">
+            <div class="col-12">
+                <div class="card shadow-sm border-0 rounded-3 p-4 text-center">
+                    <h2 class="h3 border-bottom pb-2 text-dark fw-bold mb-4 mx-auto" style="max-width: 300px;">Contact Information</h2>
+                    <div class="row g-3 justify-content-center body-font text-secondary mb-4">
+                        <div class="col-auto"><strong>📞 Phone:</strong> (928) 606-9997</div>
+                        <div class="col-auto"><strong>✉️ Email:</strong> <a href="mailto:wmp850@gmail.com">wmp850@gmail.com</a></div>
+                        <div class="col-auto"><strong>🌐 GitHub:</strong> <a href="https://github.com" target="_blank">Profile Link</a></div>
+                    </div>
+                    
+                    <div class="border-top pt-4">
+                        <h3 class="h6 text-uppercase fw-bold text-muted mb-3 tracking-wide">Need a hard copy of my credentials?</h3>
+                        <a id="downloadBtn" href="William Peterson Resume.pdf" class="btn btn-success btn-lg px-5 py-3 fw-bold shadow-sm hover-btn" download>
+                            📥 Download William Mitchell Peterson's Resume
+                        </a>
+                        <p class="mt-3 mb-0 body-font">Resume downloads counted this visit: <strong id="downloadCount" aria-live="polite">0</strong></p>
+                    </div>
+                    <div class="border-top mt-4 pt-4">
+                        <h3 class="h6 text-uppercase fw-bold text-muted mb-3 tracking-wide">Bonus: Customize the page</h3>
+                        <div class="d-flex flex-wrap justify-content-center align-items-end gap-3">
+                            <button id="themeToggle" class="btn btn-outline-dark" type="button">Switch to Dark Theme</button>
+                            <div>
+                                <label for="fontSizeInput" class="form-label mb-1">Font size</label>
+                                <select id="fontSizeInput" class="form-select">
+                                    <option value="16px">Default</option>
+                                    <option value="18px">Large</option>
+                                    <option value="20px">Extra large</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="backgroundInput" class="form-label mb-1">Page background</label>
+                                <input id="backgroundInput" class="form-control form-control-color mx-auto" type="color" value="#f8f9fa" title="Choose page background color">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="custom-gradient text-white text-center py-4 mt-auto border-top border-dark border-opacity-25 shadow-lg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-md-start mb-2 mb-md-0">
+                    <p class="mb-0 body-font text-light opacity-90">&copy; 2026 William Mitchell Peterson | Computer Science Portfolio</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-0 font-xs tracking-wider text-light opacity-75">AZURE PRODUCTION PATH: <span class="text-warning fw-semibold">/homework8</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery before app.js so its functions are available. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+</body>
+</html>
